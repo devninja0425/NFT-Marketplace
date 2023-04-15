@@ -41,7 +41,6 @@ contract("ArtToken", (accounts) => {
       const item = await artToken.Items(tokenId);
       const owner = await artToken.ownerOf(tokenId);
       const approvedAddress = await artToken.getApproved(tokenId);
-      console.log(approvedAddress);
 
       //success
       assert.equal(tokenId, totalSupply, "id is correct");
@@ -59,6 +58,10 @@ contract("ArtToken", (accounts) => {
   describe("indexing", async () => {
     it("lists colors", async () => {
       //mint 3 more tokens
+      // const mintArray = ["#5386E4", "#FFFFFF", "#000000"];
+      // mintArray.map((mint) => {
+      //   await artToken.mint(mint)
+      // })
       await artToken.mint("#5386E4");
       await artToken.mint("#FFFFFF");
       await artToken.mint("#000000");
