@@ -1,16 +1,16 @@
-const multer = require('multer')
+const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'imgs/')
+    cb(null, "imgs/");
   },
   filename: (request, file, callback) => {
-    const fileExtension = file.originalname.split('.')[1];
+    const fileExtension = file.originalname.split(".")[1];
 
-    const newNameFile = require('crypto').randomBytes(16).toString('hex');
+    const newNameFile = require("crypto").randomBytes(16).toString("hex");
 
-    callback(null, `${newNameFile}.${fileExtension}`)
-  }
+    callback(null, `${newNameFile}.${fileExtension}`);
+  },
 });
 
 const upload = multer({ storage });

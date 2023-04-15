@@ -1,4 +1,4 @@
-const tokensRoutes = require('./tokensRoutes');
+const tokensRoutes = require("./tokensRoutes");
 
 const appRouter = (app) => {
   tokensRoutes(app);
