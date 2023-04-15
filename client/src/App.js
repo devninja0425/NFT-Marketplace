@@ -8,7 +8,6 @@ import Item from "./pages/Item/index";
 
 import "./App.css";
 
-
 function App() {
   return (
     <div className="App">
